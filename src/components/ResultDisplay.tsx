@@ -42,8 +42,9 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ targetAmount, savedAmount
         </div>
         <Progress 
           value={progressPercent} 
-          className={`h-2 ${progressColor}`}
+          className="h-2"
           style={{ "--progress-width": `${progressPercent}%` } as React.CSSProperties}
+          indicatorClassName={`animate-grow ${progressColor}`}
         />
       </div>
       
@@ -52,19 +53,19 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ targetAmount, savedAmount
           <div>
             <p className="text-xs text-muted-foreground">Target Amount</p>
             <p className="text-lg font-semibold text-finance-dark">
-              ₹{targetAmount.toLocaleString('en-IN')}
+              ${targetAmount.toLocaleString()}
             </p>
           </div>
           <div>
             <p className="text-xs text-muted-foreground">Current Savings</p>
             <p className="text-lg font-semibold text-finance-accent">
-              ₹{savedAmount.toLocaleString('en-IN')}
+              ${savedAmount.toLocaleString()}
             </p>
           </div>
           <div className="col-span-2 pt-2">
             <p className="text-xs text-muted-foreground">Amount Needed</p>
             <p className="text-lg font-semibold text-finance-primary">
-              ₹{remaining.toLocaleString('en-IN')}
+              ${remaining.toLocaleString()}
             </p>
           </div>
         </div>

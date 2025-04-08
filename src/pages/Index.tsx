@@ -9,11 +9,11 @@ const Index = () => {
       <div className="container px-4 py-8 md:py-16 mx-auto">
         <header className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-finance-dark mb-2">
-            Emergency Fund Calculator (₹)
+            Emergency Fund Calculator
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Plan your financial safety net with our easy-to-use calculator. 
-            Determine how much you need to save in Indian Rupees for unexpected expenses.
+            Determine how much you need to save for unexpected expenses.
           </p>
         </header>
         
