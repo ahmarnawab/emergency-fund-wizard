@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { DollarSign, Info } from "lucide-react";
+import { DollarSign, IndianRupee, Info } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -32,7 +32,7 @@ const Calculator = () => {
 
     toast({
       title: "Emergency Fund Calculated!",
-      description: `Your recommended emergency fund is $${emergencyFund.toLocaleString()}.`,
+      description: `Your recommended emergency fund is ₹${emergencyFund.toLocaleString('en-IN')}.`,
     });
   };
 
@@ -54,7 +54,7 @@ const Calculator = () => {
     <Card className="w-full max-w-lg border-2 border-finance-light shadow-lg">
       <CardHeader className="bg-gradient-to-r from-finance-primary to-finance-secondary text-white">
         <CardTitle className="text-2xl font-bold flex items-center">
-          <DollarSign className="mr-2 h-6 w-6" />
+          <IndianRupee className="mr-2 h-6 w-6" />
           Emergency Fund Calculator
         </CardTitle>
         <CardDescription className="text-white/80">
@@ -80,7 +80,7 @@ const Calculator = () => {
               </TooltipProvider>
             </div>
             <div className="relative">
-              <DollarSign className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
+              <IndianRupee className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
               <Input
                 id="monthlyExpenses"
                 type="number"
@@ -109,7 +109,7 @@ const Calculator = () => {
               </TooltipProvider>
             </div>
             <div className="relative">
-              <DollarSign className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
+              <IndianRupee className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
               <Input
                 id="currentSavings"
                 type="number"
